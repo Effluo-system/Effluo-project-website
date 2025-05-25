@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+.homeContainer {
+    background:#0e5386;
+}
+
+.devopsImg{
+    width: 50%;
+    height: 50;
+}
