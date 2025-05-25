@@ -2,6 +2,17 @@ import PriorityHighIcon from '@mui/icons-material/PriorityHigh';
 import CodeOffIcon from '@mui/icons-material/CodeOff';
 import ConstructionIcon from '@mui/icons-material/Construction';
 import OpenWithIcon from '@mui/icons-material/OpenWith';
+import awsIcon from '../../../assets/aws-svgrepo-com.svg';
+import dockerIcon from '../../../assets/docker-svgrepo-com.svg';
+import githubIcon from '../../../assets/github-svgrepo-com.svg';
+import kubernetesIcon from '../../../assets/kubernetes-svgrepo-com.svg';
+import nodeIcon from '../../../assets/node-js-svgrepo-com.svg';
+import postgresqlIcon from '../../../assets/postgresql-icon.svg';
+import pythonIcon from '../../../assets/python-svgrepo-com.svg';
+import pytorchIcon from '../../../assets/pytorch-svgrepo-com.svg';
+import reactIcon from '../../../assets/react-svgrepo-com.svg';
+import terraformIcon from '../../../assets/terraform-icon-svgrepo-com.svg';
+import typescriptIcon from '../../../assets/typescript-svgrepo-com.svg';
 
 export const data = {
   'background-literature': {
@@ -95,4 +106,50 @@ dynamically so that the system itself will be up to date on solving common probl
 found in the software development sector`,
     ],
   },
+  stack: [
+    {
+      name: 'GitHub',
+      icon: githubIcon,
+    },
+    {
+      name: 'NodeJS',
+      icon: nodeIcon,
+    },
+    {
+      name: 'Python',
+      icon: pythonIcon,
+    },
+    {
+      name: 'Typescript',
+      icon: typescriptIcon,
+    },
+    {
+      name: 'AWS',
+      icon: awsIcon,
+    },
+    {
+      name: 'Docker',
+      icon: dockerIcon,
+    },
+    {
+      name: 'Kubernetes',
+      icon: kubernetesIcon,
+    },
+    {
+      name: 'Terraform',
+      icon: terraformIcon,
+    },
+    {
+      name: 'ReactJS',
+      icon: reactIcon,
+    },
+    {
+      name: 'PyTorch',
+      icon: pytorchIcon,
+    },
+    {
+      name: 'PostgreSQL',
+      icon: postgresqlIcon,
+    },
+  ],
 };

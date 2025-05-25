@@ -14,12 +14,13 @@ import Problem from './components/Problem';
 import Objectives from './components/Objectives';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import SystemDiagram from '../../assets/System-Diagram.png';
+import Technologies from './components/Technologies';
 
 const Domain = () => {
   const literature = data['background-literature'];
   const methodology = data['methodology'];
   return (
-    <Container>
+    <Container sx={{ mt: 6 }}>
       <Stack spacing={5}>
         <TableView
           title={literature.title}
@@ -56,6 +57,7 @@ const Domain = () => {
           }
           imgInAccordion
         />
+        <Technologies />
       </Stack>
     </Container>
   );
