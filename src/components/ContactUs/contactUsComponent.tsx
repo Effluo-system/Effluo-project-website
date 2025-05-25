@@ -11,6 +11,9 @@ const ContactUsComponent = () => {
 
     const mailtoLink = `mailto:effluo.system@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${email}\n\n${message}`)}`;
     window.location.href = mailtoLink;
+    setEmail('');
+    setSubject('');
+    setMessage('');
   };
 
   return (

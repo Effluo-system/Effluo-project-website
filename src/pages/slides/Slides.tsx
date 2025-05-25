@@ -95,9 +95,11 @@ const Slides = () => {
       maxWidth="lg" 
       sx={{ 
         py: 6,
-        minHeight: '100vh'
+        minHeight: '100vh',
+        mt: 6 
       }}
       className='homeContainer'
+
     >
       <Box sx={{ mb: 6 }}>
         {/* Section Header */}

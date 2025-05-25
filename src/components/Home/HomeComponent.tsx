@@ -7,7 +7,6 @@ import stopWatchImg from "../../assets/stop-watch.png";
 import webCodingImg from "../../assets/web-coding.png";
 import hundredImg from "../../assets/100.png";
 import zeroPercentImg from "../../assets/0-percent.png";
-i
 
 const HomeComponent = () => {
     const navigate = useNavigate();

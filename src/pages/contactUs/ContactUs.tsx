@@ -5,7 +5,7 @@ import ContactUsComponent from '../../components/ContactUs/contactUsComponent';
 
 const ContactUs = () => {
   return (
-    <Container className='homeContainer'>
+    <Container className='homeContainer' sx={{ mt: 6 }}>
       <ContactUsComponent/>
     </Container>
   );
