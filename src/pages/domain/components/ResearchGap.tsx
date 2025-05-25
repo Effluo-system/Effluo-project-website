@@ -47,11 +47,11 @@ const ResearchGap = () => {
                 }
                 aria-controls={`panel${index}-content`}
                 id={`panel${index}-header`}
-                sx={{ alignItems: 'flex-start' }}
+                sx={{ alignItems: 'flex-start', textAlign: 'justify' }}
               >
                 <Typography variant="h5">{gap.title}</Typography>
               </AccordionSummary>
-              <AccordionDetails>
+              <AccordionDetails sx={{ textAlign: 'justify' }}>
                 <Typography variant="pSmall" sx={{ textAlign: 'justify' }}>
                   {gap.desc}
                 </Typography>

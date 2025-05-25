@@ -64,4 +64,35 @@ export const data = {
     ],
     p2: 'Together, these advancements seek to improve automation, accuracy, and adaptability in modern DevOps workflows.',
   },
+  objectives: [
+    'Create a GitHub app module that monitors repository activity, analyzes developer behavior patterns, and automatically generates and updates CI/CD pipelines in response to changing behaviors, with minimal user input.',
+    'Design a system that advises deployment delays based on pull request priority and build status, aiming to improve CI/CD pipeline reliability by integrating real-time feedback and context-aware decision-making.',
+    'Develop a system that automatically detects merge conflicts in pull requests and generates intelligent, context-aware resolution suggestions using hierarchical deep learning models, enhancing developer efficiency through a user-friendly interface.',
+    'Build a GitHub application that uses a fine-tuned, context-aware language model to detect semantic merge conflicts in pull requests, generate clear warnings, and integrate seamlessly into the GitHub workflow.',
+  ],
+  methodology: {
+    title: 'Methodology',
+    desc: [
+      `The proposed system is a GitHub application which can be installed to needed
+repositories by the user. Hence the user learning curve of the system will be very low
+and can be set up instantly without much effort. Once installed the application will
+subscribe to a webhook emitter which listens to events on the installed repository.
+When a event is triggered the webhook emitter will forward the event with the data
+to the GitHub application if the application is subscribed to the event. This data will
+be then used by the four components of the system as required to fire their own
+functions to achieve the research objectives as mentioned in the previous section.
+`,
+      `The GitHub application itself will be hosted in a node server and the model required
+to infer the required outputs will be saved in another flask server. If an inference
+from the model is needed the node server will make a request to the flask server and
+retrieve the necessary output. Although the components are hosted in the same node
+server, they do not interact with each other`,
+      `The main reason that the components do not interact with each other is to preserve
+the modularity of the system. Because of the modularity, the system will be able to
+quickly turn the features on and off when the features are needed. Although the
+system only contains four solutions as of now, this can be changed as needed
+dynamically so that the system itself will be up to date on solving common problems
+found in the software development sector`,
+    ],
+  },
 };

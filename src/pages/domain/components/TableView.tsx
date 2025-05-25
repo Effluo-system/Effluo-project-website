@@ -16,6 +16,7 @@ const TableView = ({
   flip,
   image,
   references,
+  imgInAccordion,
 }: TableViewProps) => {
   const { TableViewSX } = useCustomStyles();
   return (
@@ -23,15 +24,16 @@ const TableView = ({
       <Typography variant="h2" sx={{ color: '#0e5386', textAlign: 'center' }}>
         {title}
       </Typography>
+      {imgInAccordion && image}
       <Stack
         direction={{ xs: 'column', md: flip ? 'row-reverse' : 'row' }}
         alignItems={{ xs: 'flex-start', md: 'center' }}
         justifyContent="center"
         gap={2}
       >
-        <Stack>{image}</Stack>
+        {!imgInAccordion && <Stack>{image}</Stack>}
         <Stack>
-          <Stack my={2} spacing={2}>
+          <Stack my={3} spacing={2}>
             {desc.map((para, index) => (
               <Typography
                 key={index}
