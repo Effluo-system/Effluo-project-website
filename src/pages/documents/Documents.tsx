@@ -18,6 +18,7 @@ import {
   Schedule,
   Article
 } from '@mui/icons-material';
+import "../../css/home.css";
 
 const documents = [
   {
@@ -105,6 +106,7 @@ const Documents = () => {
         py: 6,
         minHeight: '100vh'
       }}
+      className="homeContainer"
     >
       <Box sx={{ mb: 6 }}>
         {/* Section Header */}
