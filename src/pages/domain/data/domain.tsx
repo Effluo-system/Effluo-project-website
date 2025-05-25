@@ -1,3 +1,8 @@
+import PriorityHighIcon from '@mui/icons-material/PriorityHigh';
+import CodeOffIcon from '@mui/icons-material/CodeOff';
+import ConstructionIcon from '@mui/icons-material/Construction';
+import OpenWithIcon from '@mui/icons-material/OpenWith';
+
 export const data = {
   'background-literature': {
     title: 'Background Literature',
@@ -24,5 +29,39 @@ export const data = {
       `[12] L. Da Silva et al, "Detecting Semantic Conflicts with Unit Tests," Journal of Systems and Software, vol. 214, p. 112070, 2024.`,
       `[13] J. Zhang, T. Mytkowicz, M. Kaufman, R. Piskac, and S. K. Lahiri, "Can Pre-trained 106 Language Models Be Used to Resolve Textual and Semantic Merge Conflicts?".`,
     ],
+  },
+  'research-gap': [
+    {
+      icon: <CodeOffIcon sx={{ fontSize: 50, color: '#0e5386' }} />,
+      title: 'Absence of behavioral analysis and dynamic pipeline generation',
+      desc: 'Current GenAI tools (e.g. ChatGPT, Gemini) and template-based CI/CD platforms cannot monitor user behavior or adapt pipelines automatically based on behavioral changes. There is no existing solution that dynamically generates or updates pipelines in response to user activity or evolving developer workflows. the proposed system introduces a zero-code solution',
+    },
+    {
+      icon: <PriorityHighIcon sx={{ fontSize: 50, color: '#0e5386' }} />,
+      title:
+        'Lack of Context-Aware Prioritization and Recovery Guidance in CI/CD',
+      desc: 'Existing tools lack integrated solutions that combine keyword-based PR urgency with build failure data to guide deployment decisions. Current models may predict outcomes but don’t offer actionable advice like delaying deployments. The proposed system fills this gap by using real-time context to prioritize PRs, detect critical failures, and recommend delays adaptively.',
+    },
+    {
+      icon: <ConstructionIcon sx={{ fontSize: 50, color: '#0e5386' }} />,
+      title: 'Lack of multi-granularity and context integration',
+      desc: 'While existing tools (e.g. DeepMerge, MergeBert, MergeGen) work at isolated granularity levels (line, token, file) and often omit surrounding code context, no current approach effectively combines multiple granularity levels to capture inter-conflict dependencies and broader contextual usage patterns—a critical step toward human-like resolution reasoning.',
+    },
+    {
+      icon: <OpenWithIcon sx={{ fontSize: 50, color: '#0e5386' }} />,
+      title:
+        'Limited scalability, context-awareness, and robustness across existing methods',
+      desc: 'Current approaches (static analysis, unit tests, language models) struggle with large codebases, complex semantic dependencies, and generalizability. Notably, language model-based techniques are limited by token length and prompt sensitivity, making them unreliable for broad, project-wide semantic conflict detection.',
+    },
+  ],
+  'research-problem': {
+    p1: 'Current CI/CD processes lack integrated AI-driven solutions that effectively leverage rich code context and developer behavior to automate and optimize key activities. Specifically, existing approaches to merge conflict resolution and semantic conflict detection fail to fully utilize multi-level contextual information, while pipeline generation tools do not adapt dynamically to changing user behavior. Additionally, deployment scheduling does not account for real-time PR priority and build outcomes, limiting pipeline reliability and responsiveness. This research aims to develop a comprehensive, context-aware, and behavior-driven framework that',
+    bullets: [
+      'Enhances merge conflict resolution using hierarchical deep learning models with broader code context',
+      'Detects semantic conflicts with advanced AI models beyond traditional static or test-based methods',
+      'Automatically generates and updates CI/CD pipelines based on continuous analysis of developer behavior',
+      'Advises deployment scheduling by integrating PR priority and build status through real-time feedback and reinforcement learning',
+    ],
+    p2: 'Together, these advancements seek to improve automation, accuracy, and adaptability in modern DevOps workflows.',
   },
 };

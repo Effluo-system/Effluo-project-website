@@ -20,7 +20,9 @@ const TableView = ({
   const { TableViewSX } = useCustomStyles();
   return (
     <Stack sx={TableViewSX.container}>
-      <Typography variant="h2">{title}</Typography>
+      <Typography variant="h2" sx={{ color: '#0e5386', textAlign: 'center' }}>
+        {title}
+      </Typography>
       <Stack
         direction={{ xs: 'column', md: flip ? 'row-reverse' : 'row' }}
         alignItems={{ xs: 'flex-start', md: 'center' }}
