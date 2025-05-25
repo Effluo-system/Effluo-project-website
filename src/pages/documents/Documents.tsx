@@ -155,7 +155,7 @@ const Section = ({
           p: 3,
           mb: 4,
           borderRadius: 3,
-          border: `1px solid ${alpha(theme.palette.primary.main, 0.1)}`
+          border: `1px solid ${alpha('#064472', 0.3)}`
         }}
       >
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
@@ -163,8 +163,8 @@ const Section = ({
             sx={{
               p: 1.5,
               borderRadius: 2,
-              backgroundColor: alpha(theme.palette.primary.main, 0.1),
-              color: theme.palette.primary.main,
+              backgroundColor: alpha('#064472', 0.1),
+              color: '#064472',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center'
@@ -178,7 +178,7 @@ const Section = ({
               component="h2" 
               sx={{ 
                 fontWeight: 700,
-                color: theme.palette.primary.main,
+                color: '#064472',
                 mb: 0.5
               }}
             >
@@ -256,8 +256,8 @@ const Section = ({
                     mb: 2,
                     p: 1.5,
                     borderRadius: 2,
-                    backgroundColor: alpha(theme.palette.primary.main, 0.08),
-                    color: theme.palette.primary.main,
+                    backgroundColor: alpha('#064472', 0.08),
+                    color: '#064472',
                     alignSelf: 'flex-start'
                   }}
                 >
@@ -304,15 +304,16 @@ const Section = ({
                     py: 1.2,
                     fontWeight: 600,
                     backgroundColor: item.downloadUrl 
-                      ? theme.palette.primary.main
+                      ? '#064472'
                       : 'transparent',
+                    color: item.downloadUrl ? 'white' : '#064472',
                     '&:hover': {
                       backgroundColor: item.downloadUrl 
-                        ? theme.palette.primary.dark
-                        : alpha(theme.palette.primary.main, 0.08),
+                        ? '#053a62'
+                        : alpha('#064472', 0.08),
                       transform: 'translateY(-2px)',
                       boxShadow: item.downloadUrl 
-                        ? `0 8px 20px ${alpha(theme.palette.primary.main, 0.3)}`
+                        ? `0 8px 20px ${alpha('#064472', 0.3)}`
                         : 'none'
                     },
                     '&:disabled': {
