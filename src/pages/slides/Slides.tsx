@@ -18,6 +18,7 @@ import {
   Slideshow,
   PresentToAll
 } from '@mui/icons-material';
+import "../../css/home.css";
 
 const presentations = [
   {
@@ -96,6 +97,7 @@ const Slides = () => {
         py: 6,
         minHeight: '100vh'
       }}
+      className='homeContainer'
     >
       <Box sx={{ mb: 6 }}>
         {/* Section Header */}
