@@ -1,6 +1,6 @@
 import { Box, Stack, Typography } from '@mui/material';
 import useCustomStyles from './useStyles';
-import { AlertProps } from '../../../types/common';
+import type { AlertProps } from '../../../types/common';
 
 const CustomAlert = ({ message, resourceName }: AlertProps) => {
   const { alertSX } = useCustomStyles();

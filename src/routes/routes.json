@@ -1,23 +1,23 @@
 {
   "ROOT": {
-    "route": "/"
+    "route": "/Effluo-project-website/"
   },
   "DOMAIN": {
-    "route": "/domain"
+    "route": "/Effluo-project-website/domain"
   },
   "MILESTONES": {
-    "route": "/milestones"
+    "route": "/Effluo-project-website/milestones"
   },
   "DOCUMENTS": {
-    "route": "/documents"
+    "route": "/Effluo-project-website/documents"
   },
   "SLIDES": {
-    "route": "/slides"
+    "route": "/Effluo-project-website/slides"
   },
   "ABOUT_US": {
-    "route": "/about-us"
+    "route": "/Effluo-project-website/about-us"
   },
   "CONTACT_US": {
-    "route": "/contact-us"
+    "route": "/Effluo-project-website/contact-us"
   }
 }

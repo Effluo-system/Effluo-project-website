@@ -9,86 +9,94 @@ import {
   Chip,
   Paper,
   useTheme,
-  alpha
+  alpha,
 } from '@mui/material';
-import { 
-  Download, 
-  Description, 
-  Slideshow, 
-  CheckCircle, 
+import {
+  Download,
+  Description,
+  Slideshow,
+  CheckCircle,
   Schedule,
   Article,
-  PresentToAll
+  PresentToAll,
 } from '@mui/icons-material';
 
 const documents = [
   {
     id: 1,
-    title: "Topic Assessment",
-    description: "Initial project assessment and topic selection documentation",
-    downloadUrl: "https://drive.google.com/file/d/1awRwntaYucgXgl6Y9O4CLVswZDQ6GA8c/view?usp=sharing",
-    status: "completed",
-    type: "assessment"
+    title: 'Topic Assessment',
+    description: 'Initial project assessment and topic selection documentation',
+    downloadUrl:
+      'https://drive.google.com/file/d/1awRwntaYucgXgl6Y9O4CLVswZDQ6GA8c/view?usp=sharing',
+    status: 'completed',
+    type: 'assessment',
   },
   {
     id: 2,
-    title: "Project Proposal",
-    description: "Comprehensive project proposal with objectives and methodology",
-    downloadUrl: "https://drive.google.com/file/d/1s83AFQXl26O-q2tB5HwNvKT9gLdz_WmT/view?usp=sharing",
-    status: "completed",
-    type: "proposal"
+    title: 'Project Proposal',
+    description:
+      'Comprehensive project proposal with objectives and methodology',
+    downloadUrl:
+      'https://drive.google.com/file/d/1s83AFQXl26O-q2tB5HwNvKT9gLdz_WmT/view?usp=sharing',
+    status: 'completed',
+    type: 'proposal',
   },
   {
     id: 3,
-    title: "Research Paper",
-    description: "In-depth research findings and analysis documentation",
-    downloadUrl: "https://drive.google.com/file/d/1nGN0STx3IejDpNCF9qB0t1qlwYMZCy0S/view?usp=sharing",
-    status: "completed",
-    type: "research"
+    title: 'Research Paper',
+    description: 'In-depth research findings and analysis documentation',
+    downloadUrl:
+      'https://drive.google.com/file/d/1nGN0STx3IejDpNCF9qB0t1qlwYMZCy0S/view?usp=sharing',
+    status: 'completed',
+    type: 'research',
   },
   {
     id: 4,
-    title: "Final Report",
-    description: "Complete project summary with results and conclusions",
-    downloadUrl: "https://drive.google.com/file/d/1ar4q0ilYGHVCjTMZ5rWZYdakiNHrMopV/view?usp=sharing",
-    status: "completed",
-    type: "report"
-  }
+    title: 'Final Report',
+    description: 'Complete project summary with results and conclusions',
+    downloadUrl:
+      'https://drive.google.com/file/d/1ar4q0ilYGHVCjTMZ5rWZYdakiNHrMopV/view?usp=sharing',
+    status: 'completed',
+    type: 'report',
+  },
 ];
 
 const presentations = [
   {
     id: 5,
-    title: "Proposal Presentation",
-    description: "Project proposal and initial concept presentation",
-    downloadUrl: "https://drive.google.com/file/d/1AR_AWmwDwRF-jV7fpCpSYqrrQFswPakK/view?usp=sharing",
-    status: "completed",
-    type: "presentation"
+    title: 'Proposal Presentation',
+    description: 'Project proposal and initial concept presentation',
+    downloadUrl:
+      'https://drive.google.com/file/d/1AR_AWmwDwRF-jV7fpCpSYqrrQFswPakK/view?usp=sharing',
+    status: 'completed',
+    type: 'presentation',
   },
   {
     id: 6,
-    title: "Progress Presentation 1",
-    description: "First milestone progress review and updates",
-    downloadUrl: "https://drive.google.com/file/d/1oHaMgdSIx6F3G9PbI5RS6aOkgebiRnw3/view?usp=sharing",
-    status: "completed",
-    type: "presentation"
+    title: 'Progress Presentation 1',
+    description: 'First milestone progress review and updates',
+    downloadUrl:
+      'https://drive.google.com/file/d/1oHaMgdSIx6F3G9PbI5RS6aOkgebiRnw3/view?usp=sharing',
+    status: 'completed',
+    type: 'presentation',
   },
   {
     id: 7,
-    title: "Progress Presentation 2",
-    description: "Second milestone progress review and developments",
-    downloadUrl: "https://drive.google.com/file/d/1t_shL-kUvm49C54wiAeJM8B9bQuPUBf3/view?usp=sharing",
-    status: "completed",
-    type: "presentation"
+    title: 'Progress Presentation 2',
+    description: 'Second milestone progress review and developments',
+    downloadUrl:
+      'https://drive.google.com/file/d/1t_shL-kUvm49C54wiAeJM8B9bQuPUBf3/view?usp=sharing',
+    status: 'completed',
+    type: 'presentation',
   },
   {
     id: 8,
-    title: "Final Presentation",
-    description: "Comprehensive final project presentation and demo",
-    downloadUrl: "",
-    status: "pending",
-    type: "presentation"
-  }
+    title: 'Final Presentation',
+    description: 'Comprehensive final project presentation and demo',
+    downloadUrl: '',
+    status: 'pending',
+    type: 'presentation',
+  },
 ];
 
 const handleDownload = (url: string) => {
@@ -134,17 +142,17 @@ const getTypeIcon = (type: string) => {
   }
 };
 
-const Section = ({ 
-  title, 
-  items, 
-  icon 
-}: { 
-  title: string, 
-  items: typeof documents,
-  icon: React.ReactNode 
+const Section = ({
+  title,
+  items,
+  icon,
+}: {
+  title: string;
+  items: typeof documents;
+  icon: React.ReactNode;
 }) => {
   const theme = useTheme();
-  
+
   return (
     <Box sx={{ mb: 6 }}>
       {/* Section Header */}
@@ -155,7 +163,7 @@ const Section = ({
           p: 3,
           mb: 4,
           borderRadius: 3,
-          border: `1px solid ${alpha(theme.palette.primary.main, 0.1)}`
+          border: `1px solid ${alpha(theme.palette.primary.main, 0.1)}`,
         }}
       >
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
@@ -167,25 +175,27 @@ const Section = ({
               color: theme.palette.primary.main,
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'center'
+              justifyContent: 'center',
             }}
           >
             {icon}
           </Box>
           <Box>
-            <Typography 
-              variant="h4" 
-              component="h2" 
-              sx={{ 
+            <Typography
+              variant="h4"
+              component="h2"
+              sx={{
                 fontWeight: 700,
                 color: theme.palette.primary.main,
-                mb: 0.5
+                mb: 0.5,
               }}
             >
               {title}
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              {title === 'Documents' ? 'Project documentation and reports' : 'Presentation slides and materials'}
+              {title === 'Documents'
+                ? 'Project documentation and reports'
+                : 'Presentation slides and materials'}
             </Typography>
           </Box>
         </Box>
@@ -209,18 +219,21 @@ const Section = ({
                 '@keyframes slideInUp': {
                   '0%': {
                     opacity: 0,
-                    transform: 'translateY(30px)'
+                    transform: 'translateY(30px)',
                   },
                   '100%': {
                     opacity: 1,
-                    transform: 'translateY(0)'
-                  }
+                    transform: 'translateY(0)',
+                  },
                 },
                 '&:hover': {
                   transform: 'translateY(-8px) scale(1.02)',
-                  boxShadow: `0 20px 40px ${alpha(theme.palette.primary.main, 0.15)}`,
-                  border: `1px solid ${alpha(theme.palette.primary.main, 0.2)}`
-                }
+                  boxShadow: `0 20px 40px ${alpha(
+                    theme.palette.primary.main,
+                    0.15
+                  )}`,
+                  border: `1px solid ${alpha(theme.palette.primary.main, 0.2)}`,
+                },
               }}
             >
               {/* Status Indicator */}
@@ -229,7 +242,7 @@ const Section = ({
                   position: 'absolute',
                   top: 16,
                   right: 16,
-                  zIndex: 1
+                  zIndex: 1,
                 }}
               >
                 <Chip
@@ -239,17 +252,19 @@ const Section = ({
                   size="small"
                   sx={{
                     fontWeight: 600,
-                    textTransform: 'capitalize'
+                    textTransform: 'capitalize',
                   }}
                 />
               </Box>
 
-              <CardContent sx={{ 
-                flexGrow: 1, 
-                display: 'flex', 
-                flexDirection: 'column',
-                p: 3
-              }}>
+              <CardContent
+                sx={{
+                  flexGrow: 1,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  p: 3,
+                }}
+              >
                 {/* Type Icon */}
                 <Box
                   sx={{
@@ -258,21 +273,21 @@ const Section = ({
                     borderRadius: 2,
                     backgroundColor: alpha(theme.palette.primary.main, 0.08),
                     color: theme.palette.primary.main,
-                    alignSelf: 'flex-start'
+                    alignSelf: 'flex-start',
                   }}
                 >
                   {getTypeIcon(item.type)}
                 </Box>
 
                 {/* Title */}
-                <Typography 
-                  variant="h6" 
-                  component="h3" 
+                <Typography
+                  variant="h6"
+                  component="h3"
                   gutterBottom
-                  sx={{ 
+                  sx={{
                     fontWeight: 600,
                     lineHeight: 1.3,
-                    mb: 1.5
+                    mb: 1.5,
                   }}
                 >
                   {item.title}
@@ -282,10 +297,10 @@ const Section = ({
                 <Typography
                   variant="body2"
                   color="text.secondary"
-                  sx={{ 
+                  sx={{
                     flexGrow: 1,
                     mb: 3,
-                    lineHeight: 1.6
+                    lineHeight: 1.6,
                   }}
                 >
                   {item.description || 'No description available'}
@@ -293,32 +308,37 @@ const Section = ({
 
                 {/* Download Button */}
                 <Button
-                  variant={item.downloadUrl ? "contained" : "outlined"}
+                  variant={item.downloadUrl ? 'contained' : 'outlined'}
                   fullWidth
                   startIcon={<Download />}
-                  onClick={() => item.downloadUrl && handleDownload(item.downloadUrl)}
+                  onClick={() =>
+                    item.downloadUrl && handleDownload(item.downloadUrl)
+                  }
                   disabled={!item.downloadUrl}
                   sx={{
                     textTransform: 'none',
                     borderRadius: 2,
                     py: 1.2,
                     fontWeight: 600,
-                    backgroundColor: item.downloadUrl 
+                    backgroundColor: item.downloadUrl
                       ? theme.palette.primary.main
                       : 'transparent',
                     '&:hover': {
-                      backgroundColor: item.downloadUrl 
+                      backgroundColor: item.downloadUrl
                         ? theme.palette.primary.dark
                         : alpha(theme.palette.primary.main, 0.08),
                       transform: 'translateY(-2px)',
-                      boxShadow: item.downloadUrl 
+                      boxShadow: item.downloadUrl
                         ? `0 8px 20px ${alpha(theme.palette.primary.main, 0.3)}`
-                        : 'none'
+                        : 'none',
                     },
                     '&:disabled': {
-                      backgroundColor: alpha(theme.palette.action.disabled, 0.08),
-                      color: theme.palette.action.disabled
-                    }
+                      backgroundColor: alpha(
+                        theme.palette.action.disabled,
+                        0.08
+                      ),
+                      color: theme.palette.action.disabled,
+                    },
                   }}
                 >
                   {item.downloadUrl ? 'Download' : 'Coming Soon'}
@@ -333,26 +353,18 @@ const Section = ({
 };
 
 const Documents = () => {
-  const theme = useTheme();
-  
   return (
-    <Container 
-      maxWidth="lg" 
-      sx={{ 
+    <Container
+      maxWidth="lg"
+      sx={{
         py: 6,
-        minHeight: '100vh'
+        minHeight: '100vh',
       }}
     >
-
-
-      <Section 
-        title="Documents" 
-        items={documents} 
-        icon={<Description />}
-      />
-      <Section 
-        title="Presentations" 
-        items={presentations} 
+      <Section title="Documents" items={documents} icon={<Description />} />
+      <Section
+        title="Presentations"
+        items={presentations}
         icon={<Slideshow />}
       />
     </Container>
