@@ -1,9 +1,14 @@
 import { Container } from '@mui/material';
+import HomeComponent from '../../components/Home/HomeComponent';
+import '../../css/home.css'
+
 
 const Home = () => {
   return (
-    <Container>
-      <h1>Home</h1>
+    <Container className = 'homeContainer'>
+
+      <HomeComponent/>
+  
     </Container>
   );
 };
