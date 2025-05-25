@@ -4,4 +4,5 @@ export interface TableViewProps {
   flip?: boolean;
   desc: string[];
   references?: string[];
+  imgInAccordion?: boolean;
 }

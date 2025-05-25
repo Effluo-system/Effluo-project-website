@@ -1,15 +1,14 @@
-import { Container } from '@mui/material';
+import { Container, Stack } from '@mui/material';
 import HomeComponent from '../../components/Home/HomeComponent';
-import '../../css/home.css'
-
+import '../../css/home.css';
 
 const Home = () => {
   return (
-    <Container className = 'homeContainer'>
-
-      <HomeComponent/>
-  
-    </Container>
+    <Stack pb={6}>
+      <Container className="homeContainer" sx={{ mt: 6 }}>
+        <HomeComponent />
+      </Container>
+    </Stack>
   );
 };
 
