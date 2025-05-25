@@ -10,9 +10,17 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { useNavigate } from 'react-router-dom';
-import { ROOT } from '../../routes/routes.json';
+import { ROOT, ABOUT_US, CONTACT_US } from '../../routes/routes.json';
 
-const pages = ['Console', 'About'];
+const pages = [
+  'Home',
+  'Domain',
+  'Milestones',
+  'Documents',
+  'Slides',
+  'About Us',
+  'Contact Us',
+];
 
 function ResponsiveAppBar() {
   const navigate = useNavigate();
@@ -83,7 +91,15 @@ function ResponsiveAppBar() {
                   key={page}
                   onClick={() => {
                     handleCloseNavMenu;
-                    navigate(page.toLowerCase());
+                    if (page === 'Home') {
+                      navigate(ROOT.route);
+                    } else if (page === 'About Us') {
+                      navigate(ABOUT_US.route);
+                    } else if (page === 'Contact Us') {
+                      navigate(CONTACT_US.route);
+                    } else {
+                      navigate(page.toLowerCase());
+                    }
                   }}
                 >
                   <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
@@ -116,7 +132,15 @@ function ResponsiveAppBar() {
                 key={page}
                 onClick={() => {
                   handleCloseNavMenu;
-                  navigate(page.toLowerCase());
+                  if (page === 'Home') {
+                    navigate(ROOT.route);
+                  } else if (page === 'About Us') {
+                    navigate(ABOUT_US.route);
+                  } else if (page === 'Contact Us') {
+                    navigate(CONTACT_US.route);
+                  } else {
+                    navigate(page.toLowerCase());
+                  }
                 }}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >

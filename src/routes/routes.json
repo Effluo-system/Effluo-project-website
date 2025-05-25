@@ -2,18 +2,22 @@
   "ROOT": {
     "route": "/"
   },
-  "LOGIN": {
-    "route": "login"
+  "DOMAIN": {
+    "route": "/domain"
   },
-  "CONSOLE": {
-    "route": "console",
-    "subroutes": {
-      "PULL_REQUESTS": "pull-requests",
-      "REVIEWS": "reviews",
-      "REPOSITORIES": "repositories",
-      "REVIEWER_SUMMARY": "reviewer-summary",
-      "ISSUES": "issues",
-      "WORKLOAD": "workload"
-    }
+  "MILESTONES": {
+    "route": "/milestones"
+  },
+  "DOCUMENTS": {
+    "route": "/documents"
+  },
+  "SLIDES": {
+    "route": "/slides"
+  },
+  "ABOUT_US": {
+    "route": "/about-us"
+  },
+  "CONTACT_US": {
+    "route": "/contact-us"
   }
 }
