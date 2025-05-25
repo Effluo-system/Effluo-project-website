@@ -1,9 +1,12 @@
 import { Container } from '@mui/material';
+import '../../css/home.css';
+import ContactUsComponent from '../../components/ContactUs/contactUsComponent';
+
 
 const ContactUs = () => {
   return (
-    <Container>
-      <h1>contact</h1>
+    <Container className='homeContainer'>
+      <ContactUsComponent/>
     </Container>
   );
 };
