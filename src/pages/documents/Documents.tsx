@@ -9,50 +9,56 @@ import {
   Chip,
   Paper,
   useTheme,
-  alpha
+  alpha,
 } from '@mui/material';
-import { 
-  Download, 
-  Description, 
-  CheckCircle, 
+
+import {
+  Download,
+  Description,
+  CheckCircle,
   Schedule,
-  Article
+  Article,
 } from '@mui/icons-material';
-import "../../css/home.css";
+import '../../css/home.css';
 
 const documents = [
   {
     id: 1,
-    title: "Topic Assessment",
-    description: "Initial project assessment and topic selection documentation",
-    downloadUrl: "https://drive.google.com/file/d/1awRwntaYucgXgl6Y9O4CLVswZDQ6GA8c/view?usp=sharing",
-    status: "completed",
-    type: "assessment"
+    title: 'Topic Assessment',
+    description: 'Initial project assessment and topic selection documentation',
+    downloadUrl:
+      'https://drive.google.com/file/d/1awRwntaYucgXgl6Y9O4CLVswZDQ6GA8c/view?usp=sharing',
+    status: 'completed',
+    type: 'assessment',
   },
   {
     id: 2,
-    title: "Project Proposal",
-    description: "Comprehensive project proposal with objectives and methodology",
-    downloadUrl: "https://drive.google.com/file/d/1s83AFQXl26O-q2tB5HwNvKT9gLdz_WmT/view?usp=sharing",
-    status: "completed",
-    type: "proposal"
+    title: 'Project Proposal',
+    description:
+      'Comprehensive project proposal with objectives and methodology',
+    downloadUrl:
+      'https://drive.google.com/file/d/1s83AFQXl26O-q2tB5HwNvKT9gLdz_WmT/view?usp=sharing',
+    status: 'completed',
+    type: 'proposal',
   },
   {
     id: 3,
-    title: "Research Paper",
-    description: "In-depth research findings and analysis documentation",
-    downloadUrl: "https://drive.google.com/file/d/1nGN0STx3IejDpNCF9qB0t1qlwYMZCy0S/view?usp=sharing",
-    status: "completed",
-    type: "research"
+    title: 'Research Paper',
+    description: 'In-depth research findings and analysis documentation',
+    downloadUrl:
+      'https://drive.google.com/file/d/1nGN0STx3IejDpNCF9qB0t1qlwYMZCy0S/view?usp=sharing',
+    status: 'completed',
+    type: 'research',
   },
   {
     id: 4,
-    title: "Final Report",
-    description: "Complete project summary with results and conclusions",
-    downloadUrl: "https://drive.google.com/file/d/1ar4q0ilYGHVCjTMZ5rWZYdakiNHrMopV/view?usp=sharing",
-    status: "completed",
-    type: "report"
-  }
+    title: 'Final Report',
+    description: 'Complete project summary with results and conclusions',
+    downloadUrl:
+      'https://drive.google.com/file/d/1ar4q0ilYGHVCjTMZ5rWZYdakiNHrMopV/view?usp=sharing',
+    status: 'completed',
+    type: 'report',
+  },
 ];
 
 const handleDownload = (url: string) => {
@@ -98,13 +104,12 @@ const getTypeIcon = (type: string) => {
 
 const Documents = () => {
   const theme = useTheme();
-  
   return (
-    <Container 
-      maxWidth="lg" 
-      sx={{ 
+    <Container
+      maxWidth="lg"
+      sx={{
         py: 6,
-        minHeight: '100vh'
+        minHeight: '100vh',
       }}
       className="homeContainer"
     >
@@ -117,7 +122,7 @@ const Documents = () => {
             p: 3,
             mb: 4,
             borderRadius: 3,
-            border: `1px solid ${alpha('#064472', 0.3)}`
+            border: `1px solid ${alpha('#064472', 0.3)}`,
           }}
         >
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
@@ -129,19 +134,19 @@ const Documents = () => {
                 color: '#064472',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center'
+                justifyContent: 'center',
               }}
             >
               <Description />
             </Box>
             <Box>
-              <Typography 
-                variant="h4" 
-                component="h1" 
-                sx={{ 
+              <Typography
+                variant="h4"
+                component="h1"
+                sx={{
                   fontWeight: 700,
                   color: '#064472',
-                  mb: 0.5
+                  mb: 0.5,
                 }}
               >
                 Documents
@@ -171,18 +176,24 @@ const Documents = () => {
                   '@keyframes slideInUp': {
                     '0%': {
                       opacity: 0,
-                      transform: 'translateY(30px)'
+                      transform: 'translateY(30px)',
                     },
                     '100%': {
                       opacity: 1,
-                      transform: 'translateY(0)'
-                    }
+                      transform: 'translateY(0)',
+                    },
                   },
                   '&:hover': {
                     transform: 'translateY(-8px) scale(1.02)',
-                    boxShadow: `0 20px 40px ${alpha(theme.palette.primary.main, 0.15)}`,
-                    border: `1px solid ${alpha(theme.palette.primary.main, 0.2)}`
-                  }
+                    boxShadow: `0 20px 40px ${alpha(
+                      theme.palette.primary.main,
+                      0.15
+                    )}`,
+                    border: `1px solid ${alpha(
+                      theme.palette.primary.main,
+                      0.2
+                    )}`,
+                  },
                 }}
               >
                 {/* Status Indicator */}
@@ -191,7 +202,7 @@ const Documents = () => {
                     position: 'absolute',
                     top: 16,
                     right: 16,
-                    zIndex: 1
+                    zIndex: 1,
                   }}
                 >
                   <Chip
@@ -201,17 +212,19 @@ const Documents = () => {
                     size="small"
                     sx={{
                       fontWeight: 600,
-                      textTransform: 'capitalize'
+                      textTransform: 'capitalize',
                     }}
                   />
                 </Box>
 
-                <CardContent sx={{ 
-                  flexGrow: 1, 
-                  display: 'flex', 
-                  flexDirection: 'column',
-                  p: 3
-                }}>
+                <CardContent
+                  sx={{
+                    flexGrow: 1,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    p: 3,
+                  }}
+                >
                   {/* Type Icon */}
                   <Box
                     sx={{
@@ -220,21 +233,21 @@ const Documents = () => {
                       borderRadius: 2,
                       backgroundColor: alpha('#064472', 0.08),
                       color: '#064472',
-                      alignSelf: 'flex-start'
+                      alignSelf: 'flex-start',
                     }}
                   >
                     {getTypeIcon(item.type)}
                   </Box>
 
                   {/* Title */}
-                  <Typography 
-                    variant="h6" 
-                    component="h3" 
+                  <Typography
+                    variant="h6"
+                    component="h3"
                     gutterBottom
-                    sx={{ 
+                    sx={{
                       fontWeight: 600,
                       lineHeight: 1.3,
-                      mb: 1.5
+                      mb: 1.5,
                     }}
                   >
                     {item.title}
@@ -244,10 +257,10 @@ const Documents = () => {
                   <Typography
                     variant="body2"
                     color="text.secondary"
-                    sx={{ 
+                    sx={{
                       flexGrow: 1,
                       mb: 3,
-                      lineHeight: 1.6
+                      lineHeight: 1.6,
                     }}
                   >
                     {item.description || 'No description available'}
@@ -255,33 +268,38 @@ const Documents = () => {
 
                   {/* Download Button */}
                   <Button
-                    variant={item.downloadUrl ? "contained" : "outlined"}
+                    variant={item.downloadUrl ? 'contained' : 'outlined'}
                     fullWidth
                     startIcon={<Download />}
-                    onClick={() => item.downloadUrl && handleDownload(item.downloadUrl)}
+                    onClick={() =>
+                      item.downloadUrl && handleDownload(item.downloadUrl)
+                    }
                     disabled={!item.downloadUrl}
                     sx={{
                       textTransform: 'none',
                       borderRadius: 2,
                       py: 1.2,
                       fontWeight: 600,
-                      backgroundColor: item.downloadUrl 
+                      backgroundColor: item.downloadUrl
                         ? '#064472'
                         : 'transparent',
                       color: item.downloadUrl ? 'white' : '#064472',
                       '&:hover': {
-                        backgroundColor: item.downloadUrl 
+                        backgroundColor: item.downloadUrl
                           ? '#053a62'
                           : alpha('#064472', 0.08),
                         transform: 'translateY(-2px)',
-                        boxShadow: item.downloadUrl 
+                        boxShadow: item.downloadUrl
                           ? `0 8px 20px ${alpha('#064472', 0.3)}`
-                          : 'none'
+                          : 'none',
                       },
                       '&:disabled': {
-                        backgroundColor: alpha(theme.palette.action.disabled, 0.08),
-                        color: theme.palette.action.disabled
-                      }
+                        backgroundColor: alpha(
+                          theme.palette.action.disabled,
+                          0.08
+                        ),
+                        color: theme.palette.action.disabled,
+                      },
                     }}
                   >
                     {item.downloadUrl ? 'Download' : 'Coming Soon'}

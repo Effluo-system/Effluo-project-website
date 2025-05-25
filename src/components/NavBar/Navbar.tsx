@@ -97,11 +97,12 @@ function ResponsiveAppBar() {
                     if (page === 'Home') {
                       navigate(ROOT.route);
                     } else if (page === 'About Us') {
-                      navigate(ABOUT_US.route);
+                      navigate(`${ABOUT_US.route}`);
                     } else if (page === 'Contact Us') {
-                      navigate(CONTACT_US.route);
+                      navigate(`${CONTACT_US.route}`);
                     } else {
-                      navigate(page.toLowerCase());
+                      const route = `${ROOT.route}${page.toLowerCase()}`;
+                      navigate(route);
                     }
                   }}
                 >
@@ -138,11 +139,12 @@ function ResponsiveAppBar() {
                   if (page === 'Home') {
                     navigate(ROOT.route);
                   } else if (page === 'About Us') {
-                    navigate(ABOUT_US.route);
+                    navigate(`${ABOUT_US.route}`);
                   } else if (page === 'Contact Us') {
-                    navigate(CONTACT_US.route);
+                    navigate(`${CONTACT_US.route}`);
                   } else {
-                    navigate(page.toLowerCase());
+                    const route = `${ROOT.route}${page.toLowerCase()}`;
+                    navigate(route);
                   }
                 }}
                 sx={{ my: 2, color: 'white', display: 'block' }}
