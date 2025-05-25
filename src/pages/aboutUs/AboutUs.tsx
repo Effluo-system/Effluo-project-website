@@ -4,7 +4,7 @@ import '../../css/home.css';
 
 const AboutUs = () => {
   return (
-    <Container className='homeContainer'>
+    <Container className='homeContainer' sx={{ mt: 6 }}>
       <AboutUsComponent />
     </Container>
   );

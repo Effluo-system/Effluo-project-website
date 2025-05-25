@@ -217,7 +217,7 @@ const Milestones = () => {
   const totalMarks = getTotalMarks();
 
   return (
-    <Container className="homeContainer">
+    <Container className="homeContainer" sx={{ mt: 6 }}>
       <div className="min-h-screen py-12 pt-6 px-2">
         <div className="max-w-4xl mx-auto">
           {/* Header Section */}

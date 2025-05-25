@@ -1,5 +1,12 @@
 import { useNavigate } from "react-router";
 import {DOMAIN} from "../../routes/routes.json";
+import devopsImg from "../../assets/devops-removebg.png";
+import conflictImg from "../../assets/conflict.png";
+import rocketImg from "../../assets/rocket.png";
+import stopWatchImg from "../../assets/stop-watch.png";
+import webCodingImg from "../../assets/web-coding.png";
+import hundredImg from "../../assets/100.png";
+import zeroPercentImg from "../../assets/0-percent.png";
 
 const HomeComponent = () => {
     const navigate = useNavigate();
@@ -28,7 +35,7 @@ const HomeComponent = () => {
 
                 {/* Image Section */}
                 <div className="flex-1">
-                    <img src="src/assets/devops-removebg.png" alt="devops" className="w-full h-auto rounded-2xl" />
+                    <img src={devopsImg} alt="devops" className="w-full h-auto rounded-2xl" />
                 </div>
             </div>
 
@@ -45,7 +52,7 @@ const HomeComponent = () => {
         <div className="grid grid-cols-2 gap-4">
   <div className="bg-white p-4 rounded-xl felx flex-col items-center">
     <div className="flex items-center w-full">
-    <img src="src\assets\conflict.png" alt="Conflict" className="w-16 h-16 mr-8"></img>
+    <img src={conflictImg} alt="Conflict" className="w-16 h-16 mr-8"></img>
     <h3 className="text-black font-bold text-lg">Merge Conflict Resolution</h3></div>
     <div className="text-gray-800 mt-4 text-center">
         <p>Automatically resolve merge conflicts with intelligent analysis. Reduce manual intervention and minimize bugs in your codebase.</p>
@@ -53,7 +60,7 @@ const HomeComponent = () => {
     </div>
   <div className="bg-white p-4 rounded-xl felx flex-col items-center">
     <div className="flex items-center w-full">
-    <img src="src\assets\rocket.png" alt="Conflict" className="w-16 h-16 mr-8"></img>
+    <img src={rocketImg} alt="Conflict" className="w-16 h-16 mr-8"></img>
     <h3 className="text-black font-bold text-lg">CI/CD Pipeline Automation</h3></div>
     <div className="text-gray-800 mt-4 text-center">
         <p>Context-aware pipeline generation with automated PR reviewer assignment. Perfect for teams new to DevOps practices.</p>
@@ -61,7 +68,7 @@ const HomeComponent = () => {
     </div>
   <div className="bg-white p-4 rounded-xl felx flex-col items-center">
     <div className="flex items-center w-full">
-    <img src="src\assets\stop-watch.png" alt="Conflict" className="w-16 h-16 mr-8"></img>
+    <img src={stopWatchImg} alt="Conflict" className="w-16 h-16 mr-8"></img>
     <h3 className="text-black font-bold text-lg">Smart Pipeline Triggers</h3></div>
     <div className="text-gray-800 mt-4 text-center">
         <p>Recommand intelligent deployment scheduling that balances urgent fixes with thorough testing. Maintain stability while meeting deadlines.</p>
@@ -69,7 +76,7 @@ const HomeComponent = () => {
     </div>
   <div className="bg-white p-4 rounded-xl felx flex-col items-center">
     <div className="flex items-center w-full">
-    <img src="src\assets\web-coding.png" alt="Conflict" className="w-16 h-16 mr-8"></img>
+    <img src={webCodingImg} alt="Conflict" className="w-16 h-16 mr-8"></img>
     <h3 className="text-black font-bold text-lg">Semantic Conflict Detection</h3></div>
     <div className="text-gray-800 mt-4 text-center">
         <p>AI-powered detection of logical inconsistencies that traditional tools miss. Prevent runtime issues before they happen.</p>
@@ -82,12 +89,12 @@ const HomeComponent = () => {
 
             <div className="grid grid-cols-4 gap-4">
   <div className="p-4 rounded-xl flex flex-col items-center justify-center">
-  <img src="src/assets/100.png" alt="Conflict" className="w-16 h-16" />
+  <img src={hundredImg} alt="Conflict" className="w-16 h-16" />
   <h3 className="text-pink-500 font-bold text-md mt-2">GitHub Compatible</h3>
 </div>
 
    <div className="p-4 rounded-xl flex flex-col items-center justify-center">
-  <img src="src/assets/0-percent.png" alt="Conflict" className="w-16 h-16" />
+  <img src={zeroPercentImg} alt="Conflict" className="w-16 h-16" />
   <h3 className="text-sky-100 font-bold text-md mt-2">Learning Curve</h3>
 </div>
    <div className="p-4 rounded-xl flex flex-col items-center justify-center">
