@@ -1,4 +1,3 @@
-import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -11,6 +10,8 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { useNavigate } from 'react-router-dom';
 import { ROOT, ABOUT_US, CONTACT_US } from '../../routes/routes.json';
+import logo from '../../assets/Effluo-logo.png';
+import { useState } from 'react';
 
 const pages = [
   'Home',
@@ -24,9 +25,7 @@ const pages = [
 
 function ResponsiveAppBar() {
   const navigate = useNavigate();
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
-    null
-  );
+  const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -37,9 +36,13 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static" sx={{ width: '100%' }}>
+    <AppBar
+      position="static"
+      sx={{ width: '100%', backgroundColor: '#064472' }}
+    >
       <Container>
         <Toolbar disableGutters>
+          <img src={logo} alt="logo" width={50} />
           <Typography
             variant="h3"
             noWrap
