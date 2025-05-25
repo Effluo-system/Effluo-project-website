@@ -1,0 +1,19 @@
+{
+  "ROOT": {
+    "route": "/"
+  },
+  "LOGIN": {
+    "route": "login"
+  },
+  "CONSOLE": {
+    "route": "console",
+    "subroutes": {
+      "PULL_REQUESTS": "pull-requests",
+      "REVIEWS": "reviews",
+      "REPOSITORIES": "repositories",
+      "REVIEWER_SUMMARY": "reviewer-summary",
+      "ISSUES": "issues",
+      "WORKLOAD": "workload"
+    }
+  }
+}
