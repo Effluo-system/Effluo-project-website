@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import emailImg from '../../assets/email.png';
 
 const ContactUsComponent = () => {
@@ -6,10 +6,12 @@ const ContactUsComponent = () => {
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
 
-    const mailtoLink = `mailto:effluo.system@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${email}\n\n${message}`)}`;
+    const mailtoLink = `mailto:effluo.system@gmail.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(`From: ${email}\n\n${message}`)}`;
     window.location.href = mailtoLink;
     setEmail('');
     setSubject('');
@@ -54,7 +56,10 @@ const ContactUsComponent = () => {
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label htmlFor="email" className="block mb-1 text-sm font-medium text-gray-900 dark:text-gray-300">
+              <label
+                htmlFor="email"
+                className="block mb-1 text-sm font-medium text-gray-900 dark:text-gray-300"
+              >
                 Your email
               </label>
               <input
@@ -69,7 +74,10 @@ const ContactUsComponent = () => {
             </div>
 
             <div>
-              <label htmlFor="subject" className="block mb-1 text-sm font-medium text-gray-900 dark:text-gray-300">
+              <label
+                htmlFor="subject"
+                className="block mb-1 text-sm font-medium text-gray-900 dark:text-gray-300"
+              >
                 Subject
               </label>
               <input
@@ -84,7 +92,10 @@ const ContactUsComponent = () => {
             </div>
 
             <div>
-              <label htmlFor="message" className="block mb-1 text-sm font-medium text-gray-900 dark:text-gray-400">
+              <label
+                htmlFor="message"
+                className="block mb-1 text-sm font-medium text-gray-900 dark:text-gray-400"
+              >
                 Your message
               </label>
               <textarea
